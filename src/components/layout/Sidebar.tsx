@@ -14,6 +14,7 @@ function NavLink({ item, active }: { item: NavItem; active: boolean }) {
   return (
     <Link
       href={item.href}
+      data-tour={`nav-${item.href}`}
       className={cn(
         "flex items-center gap-3 px-6 py-3 transition-colors duration-200",
         active
@@ -35,7 +36,10 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-sidebar_width h-screen fixed left-0 top-0 border-r border-slate-800 bg-slate-900 z-50 flex flex-col py-4">
+    <aside
+      data-tour="sidebar"
+      className="w-sidebar_width h-screen fixed left-0 top-0 border-r border-slate-800 bg-slate-900 z-50 flex flex-col py-4"
+    >
       <div className="px-6 mb-8">
         <h1 className="text-headline-md font-bold text-primary-fixed-dim">
           FleetCommand

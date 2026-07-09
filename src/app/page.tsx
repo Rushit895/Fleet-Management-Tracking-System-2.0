@@ -98,10 +98,10 @@ export default function LandingPage() {
               <Icon name="dashboard" /> Launch Dashboard
             </Link>
             <Link
-              href="/tracking"
+              href="/dashboard?tour=1"
               className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white px-7 py-3 rounded-xl font-bold transition-all"
             >
-              <Icon name="location_on" /> View Live Tracking
+              <Icon name="explore" /> Take a Guided Tour
             </Link>
           </div>
           <p className="text-label-sm text-slate-500 mt-4">

@@ -1,5 +1,6 @@
 import { Sidebar } from "@/components/layout/Sidebar";
 import { Topbar } from "@/components/layout/Topbar";
+import { TourController } from "@/components/tour/TourController";
 
 export default function ShellLayout({
   children,
@@ -13,6 +14,7 @@ export default function ShellLayout({
         <Topbar />
         <div className="p-8 flex-1 overflow-y-auto">{children}</div>
       </main>
+      <TourController />
     </div>
   );
 }

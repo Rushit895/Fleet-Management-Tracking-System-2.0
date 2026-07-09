@@ -1,8 +1,12 @@
 import { Icon } from "@/components/ui/Icon";
+import { TourButton } from "@/components/tour/TourButton";
 
 export function Topbar() {
   return (
-    <header className="h-header_height flex items-center justify-between px-gutter border-b border-slate-800 bg-slate-900 z-40 shrink-0">
+    <header
+      data-tour="topbar"
+      className="h-header_height flex items-center justify-between px-gutter border-b border-slate-800 bg-slate-900 z-40 shrink-0"
+    >
       <div className="flex items-center bg-slate-800 rounded-lg px-3 py-1.5 w-96 max-w-[40vw]">
         <Icon name="search" className="text-slate-400 mr-2" />
         <input
@@ -13,6 +17,7 @@ export function Topbar() {
       </div>
 
       <div className="flex items-center gap-6">
+        <TourButton />
         <button className="text-slate-400 hover:text-primary-container transition-colors">
           <Icon name="calendar_today" />
         </button>
