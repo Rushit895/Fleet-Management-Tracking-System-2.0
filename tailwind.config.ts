@@ -1,0 +1,115 @@
+import type { Config } from "tailwindcss";
+
+/**
+ * Ported directly from the Stitch export (DESIGN.md + code.html tailwind.config).
+ * Single source of truth for the FleetCommand "mission control" design system.
+ */
+const config: Config = {
+  darkMode: "class",
+  content: [
+    "./src/app/**/*.{ts,tsx}",
+    "./src/components/**/*.{ts,tsx}",
+    "./src/features/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Material-3 token set from Stitch DESIGN.md
+        surface: "#faf8ff",
+        "surface-dim": "#d9d9e5",
+        "surface-bright": "#faf8ff",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f3f3fe",
+        "surface-container": "#ededf9",
+        "surface-container-high": "#e7e7f3",
+        "surface-container-highest": "#e1e2ed",
+        "surface-variant": "#e1e2ed",
+        "on-surface": "#191b23",
+        "on-surface-variant": "#434655",
+        "inverse-surface": "#2e3039",
+        "inverse-on-surface": "#f0f0fb",
+        outline: "#737686",
+        "outline-variant": "#c3c6d7",
+        "surface-tint": "#0053db",
+        primary: "#004ac6",
+        "on-primary": "#ffffff",
+        "primary-container": "#2563eb",
+        "on-primary-container": "#eeefff",
+        "inverse-primary": "#b4c5ff",
+        "primary-fixed": "#dbe1ff",
+        "primary-fixed-dim": "#b4c5ff",
+        "on-primary-fixed": "#00174b",
+        "on-primary-fixed-variant": "#003ea8",
+        secondary: "#505f76",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#d0e1fb",
+        "on-secondary-container": "#54647a",
+        "secondary-fixed": "#d3e4fe",
+        "secondary-fixed-dim": "#b7c8e1",
+        "on-secondary-fixed": "#0b1c30",
+        "on-secondary-fixed-variant": "#38485d",
+        tertiary: "#943700",
+        "on-tertiary": "#ffffff",
+        "tertiary-container": "#bc4800",
+        "on-tertiary-container": "#ffede6",
+        "tertiary-fixed": "#ffdbcd",
+        "tertiary-fixed-dim": "#ffb596",
+        "on-tertiary-fixed": "#360f00",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        error: "#ba1a1a",
+        "on-error": "#ffffff",
+        "error-container": "#ffdad6",
+        "on-error-container": "#93000a",
+        background: "#faf8ff",
+        "on-background": "#191b23",
+        // Semantic fleet status colors (non-negotiable per DESIGN.md)
+        status: {
+          moving: "#16a34a",
+          idle: "#f59e0b",
+          stopped: "#dc2626",
+          offline: "#94a3b8",
+        },
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        "2xl": "1rem",
+        full: "9999px",
+      },
+      spacing: {
+        sidebar_width: "280px",
+        sidebar_collapsed: "80px",
+        header_height: "64px",
+        gutter: "24px",
+        container_padding: "32px",
+        component_gap: "16px",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "Inter", "sans-serif"],
+        display: ["var(--font-inter)", "Inter"],
+        "headline-lg": ["var(--font-inter)", "Inter"],
+        "headline-md": ["var(--font-inter)", "Inter"],
+        "body-lg": ["var(--font-inter)", "Inter"],
+        "body-md": ["var(--font-inter)", "Inter"],
+        "data-mono": ["var(--font-inter)", "Inter"],
+        "label-sm": ["var(--font-inter)", "Inter"],
+      },
+      fontSize: {
+        display: ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+        "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+        "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+        "data-mono": ["14px", { lineHeight: "20px", fontWeight: "500" }],
+        "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+      },
+      boxShadow: {
+        card: "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;

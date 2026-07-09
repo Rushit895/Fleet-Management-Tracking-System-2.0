@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #020617; /* slate-950 base */
+  color: #f1f5f9;
+  font-feature-settings: "tnum" on; /* tabular numerals for telemetry (DESIGN.md) */
+}
+
+/* Material Symbols icon defaults */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+}
+
+/* Custom scrollbar — mission-control aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+@layer components {
+  /* Reusable status pill — subtle tint bg + bold same-color text */
+  .status-pill {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-semibold;
+  }
+  .card {
+    @apply bg-slate-900 rounded-2xl border border-slate-800 shadow-card;
+  }
+  .table-head {
+    @apply px-6 py-4 text-label-sm text-slate-400 uppercase tracking-wider text-left font-semibold;
+  }
+}
