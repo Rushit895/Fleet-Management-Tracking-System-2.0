@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import { NAV_ITEMS, SETTINGS_ITEM, type NavItem } from "./nav";
 
 function isActive(pathname: string, href: string) {
-  if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(href + "/");
 }
 

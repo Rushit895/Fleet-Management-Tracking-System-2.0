@@ -5,7 +5,7 @@ export type NavItem = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Dashboard", href: "/", icon: "dashboard" },
+  { label: "Dashboard", href: "/dashboard", icon: "dashboard" },
   { label: "Live Tracking", href: "/tracking", icon: "location_on" },
   { label: "Vehicles", href: "/vehicles", icon: "local_shipping" },
   { label: "Drivers", href: "/drivers", icon: "person" },
